@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Character</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+    body {
+      background-color: #333333;
+      font-family:Arial, Helvetica, sans-serif;
+      padding-top: 50px;
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,3,58,1) 9%, rgba(6,5,80,1) 18%, rgba(9,9,121,1) 35%, rgba(9,15,125,1) 37%, rgba(8,31,135,1) 42%, rgba(7,59,154,1) 51%, rgba(6,84,171,1) 59%, rgba(4,119,194,1) 70%, rgba(3,150,214,1) 80%, rgba(39,54,122,1) 88%, rgba(0,212,255,1) 100%);
+    }
+    img {
+      width: 100%;
+    }
+    .container {
+      width: 1250px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: row;
+    }
+    .column {
+      width: 50%;
+    }
+    .column.left {
+
+    }
+    .column.right {
+      
+    }
+    .first-right-box {
+      background-color: hsl(0, 20%, 99%);
+      height: 550px;
+      position: relative;
+      bottom: 15px;
+      right: 20px;
+    }
+    .first-right-box p {
+      color: hsl(0, 0%, 0%);
+      line-height: 2;
+      margin: 0;
+      padding: 140px 95px 0;
+    }
+    .first-right-box div{
+        background-color: rgb(150, 97, 59);
+        color: white;
+        padding: 50px;
+        width: 300px;
+        text-align: center;
+        margin-top: 100px;
+        margin-left: -50px;
+
+    }
+   
+    .first-right-box  span{
+        animation-name: boxloading;
+        transform-style: preserve-3d;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        }
+    .second-right-box {
+      background-color: hsl(240, 40%, 68%);
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 400px;
+      position: relative;
+      right: 20px;
+    }
+    .second-right-box p {
+        color: white;
+        padding: 50px 50px 50px;
+        line-height: 2;
+
+    }
+    .award i{
+       
+      font-size: 50px;
+      margin-left: 300px;
+      margin-top: 50px;
+     }
+   
+    #btn{
+        padding: 10px;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        margin-left: 450px;
+      }
+    .third-right-box{
+      display: flex;
+      column-gap: 20px;
+      flex-direction: row;
+     }
+    .third-right-box p{
+      margin-top: 50px;
+
+    }
+    .first-left-box {
+      background-color: hsl(0, 33%, 70%);
+      margin: 10px 10px;
+      height: 580px;
+    }
+    .first-left-box div {
+      color: hsl(0, 100%, 99%);
+      padding: 90px;
+    }
+    .second-left-box{
+        background-color: white;
+        height: 700px;
+        position: relative;
+        top: 0px;
+
+    }
+    
+    form{
+        margin: 100px 80px;
+        margin-left: 150px;
+
+    }
+    #btn2{
+        background-color: rgb(66, 66, 160);
+        width: 100px;
+        height: 40px;
+        color: white;
+        margin-top: 10px;
+
+
+    }
+    .howley p{
+       margin: 50px;
+
+    }
+    @media (max-width: 1024px) {
+        .container {
+          width: 100%;
+          flex-direction: column;
+        }
+        .column {
+          width: 100%;
+        }
+        .first-right-box,
+        .second-right-box,
+        .first-left-box,
+        .second-left-box {
+          width: 100%;
+          margin: auto;
+          height: auto;
+        }
+        .first-right-box p,
+        .second-right-box p,
+        .first-left-box div {
+          padding: 50px;
+        }
+        #btn {
+          margin: 20px auto;
+          display: block;
+        }
+        .award i {
+          margin: 20px auto;
+          display: block;
+        }
+      }
+      @media (max-width: 768px) {
+        .container {
+          width: 100%;
+          flex-direction: column;
+          padding: 10px;
+        }
+        .column {
+          width: 100%;
+        }
+        .first-right-box,
+        .second-right-box,
+        .first-left-box,
+        .second-left-box {
+          width: 100%;
+          margin: auto;
+          height: auto;
+        }
+        .first-right-box p,
+        .second-right-box p,
+        .first-left-box div {
+          padding: 10px;
+        }
+        #btn {
+          margin: 10px auto;
+          
+         
+        }
+        .award i {
+          margin: 10px auto;
+         
+        }
+        form {
+          margin: 10px auto;
+        }
+        .final{
+          width: 100%;
+        }
+        .final > p{
+          padding: 10px;
+          display: block;
+
+
+        }
+      }
+
+      @media (max-width: 360px) {
+        body {
+          padding: 10px;
+        }
+        .image {
+          width: 100%;
+        }
+        form {
+
+          width: 100%;
+         
+        }
+       
+      }
+</style>
+  <body>
+    <div class="container">
+      <div class="column right">
+        <div class="first-right-box">
+          <p>
+            “Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+            per inceptos himenaeos. Maecenas vel lacinia ipsum, nec fermentum
+            diam. Nulla nec gravida odio, eget vestibulum urna.”
+          </p>
+          <div id="transform">Character
+            <span style="background-color: aliceblue;"></span>
+            <span style="background-color: aliceblue;"></span>
+            <span style="background-color: aliceblue;"></span>
+            
+          </div>
+         
+        </div>
+        <div>
+          <img src="./image-01 (1).jpg" />
+        </div>
+        <div class="second-right-box" >
+          <div class="award">
+          <i class="fa-solid fa-award" ></i>
+          </div> 
+          <p>Maecenas scelerisque ex neque, vel ultrices purus pharetra sit amet.
+            Donec consectetur ipsum in elit eleifend porta. Morbi bibendum
+            porttitor dui. Proin molestie purus non nisi blandit rutrum.
+          </p>
+          <button id="btn">Read More</button>
+        </div>
+        <div>
+          <img src="./image-04.jpg" />
+        </div>
+        <div class="third-right-box"> 
+          <div>
+            <img src="./qr-link-tooplate.png" style="width: 100px; margin: 30px  30px;">
+          
+          </div>
+          <p style="color: white;">Copyright <i class="fa-regular fa-copyright" style="color: aliceblue;"></i> 2018 Company Name.<br><br> Designed by Tooplate.</p><br>
+          
+        </div>
+       
+      </div>
+      <div class="column left">
+        <div>
+          <img src="./image-02.jpg" />
+        </div>
+        <div class="first-left-box">
+            <div>
+              <i class="fa-sharp fa-regular fa-grid-round-4"></i>
+          <p style="text-align: left;">PROIN MOLESTIE PURUS NON</p>
+          <p>You can feel free to use Character HTML5 Template for your websites.
+            You cannot redistribute this as a template.</p>
+          <p style="margin-top: 0px;">Aenean gravida augue luctus, egestas massa ac, hendrerit ipsum.
+            Vestibulum et ex sollicitudin, commodo liqula suscipit, laoreet
+            lacus. Nulla ac erat at quam mollis lacinia nec sed erat.</p>
+            </div>
+        </div>
+        <div>
+          <img src="./image-03.jpg" />
+        </div>
+        <div class="second-left-box">
+           <div>
+            <p>CONTACT US</p>
+          <form>
+            <p>CONTACT US</p>
+          
+            <input type="text" id="name" placeholder="Name"  style="width: 300px; height: 30px;"><br><br>
+            <input type="text" placeholder="Email" style="width:300px; height:30px;"><br><br>
+            <textarea id="text" name="messge" rows="8"  cols="35" placeholder="message"></textarea><br><br>
+            <button style="background-color: rgb(60, 60, 136); color: beige; width: 100px ;height:40px; margin-left: 200px; box-shadow: 2px 2px 3px ; border: 2px;">Send</button>
+           </form>
+           <div  class="final"style="background-color: rgb(58, 58, 145); width: 600px; height: 200px; padding:20px 20px; margin-left: 50px; margin-top: 150px;">
+                 <p style="color: white; margin: 50px 50px; line-height: 2;">Proin imperdiet commodo nisi <br>Mauris sortales vylpuzare atte a chaplus Denecvilar marimus daer pharetra imperdiet ectus. Praesen pharetra eft ac est congue volutpat</p>
+                 
+           </div>
+           </div>
+           
+           
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
